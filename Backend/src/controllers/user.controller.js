@@ -98,8 +98,8 @@ const loginUser = asynHandler(async (req, res) => {
 
   const options = {
     httpOnly: true,
-    secure: false, // ❗ Use false on localhost
-    sameSite: "lax"
+    secure: true, // ❗ Use false on localhost
+    sameSite: "None"
   };
 
   return res
@@ -127,8 +127,8 @@ $set: { refreshToken: undefined }
   })
   const options={
   httpOnly: true,
-  secure:false,
-  sameSite: "lax"
+  secure:true,
+  sameSite: "None"
  }
   return res
   .status(200)
